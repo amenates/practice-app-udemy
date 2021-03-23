@@ -8,4 +8,8 @@ const personalMovieDB = {
     privat: false,
 }
 
-//console.log(personalMovieDB);
+let nameOfFilm = prompt('Один из последних просмотренных фильмов?');
+let ratingOfFilm = prompt('На сколько оцените его?');
+
+const movies = new Object();
+movies[`'${nameOfFilm}'`] = ratingOfFilm;
