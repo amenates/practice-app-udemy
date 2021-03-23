@@ -1,15 +1,21 @@
-let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+'use strict';
+
+const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
 
 const personalMovieDB = {
     count: numberOfFilms,
-    movies: '',
-    actors: '',
+    movies: {}, // было '' - это не правильно, пустой объект задается {}
+    actors: {},
     genres: [],
     privat: false,
 }
 
-let nameOfFilm = prompt('Один из последних просмотренных фильмов?');
-let ratingOfFilm = prompt('На сколько оцените его?');
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-const movies = new Object();
-movies[`'${nameOfFilm}'`] = ratingOfFilm;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+
+console.log(personalMovieDB);
